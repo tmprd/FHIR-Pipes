@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "HL7-FHIR Lambda - SAM Invoke",
+            "invokeTarget": {
+                "target": "code",
+                "projectRoot": "${workspaceFolder}/functions/hl7-fhir-aws-lambda-sqs",
+                "lambdaHandler": "systems.conceptual.App::handleRequest"
+            },
+            "lambda": {
+                "runtime": "java11",
+                "memoryMb": 512,
+                "payload": {
+                    "path": "${workspaceFolder}/functions/hl7-fhir-aws-lambda-sqs/src/test/resources/events/sqs-hl7-record.json"
+                },
+                "environmentVariables": {}
+            },
+            "aws": {
+                "credentials": "profile:default"
+            }
+        },
+        {
+            "name": "Attach to .NET Functions",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ],
+    "version": "0.2.0"
+}

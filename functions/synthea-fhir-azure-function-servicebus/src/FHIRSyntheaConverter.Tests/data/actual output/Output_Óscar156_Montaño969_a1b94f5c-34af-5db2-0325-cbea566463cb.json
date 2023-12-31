@@ -1,0 +1,971 @@
+{
+  "id": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+  "BIRTHDATE": "1997-07-14",
+  "SSN": "999-11-2698",
+  "DRIVERS": "S99991992",
+  "PASSPORT": "X14225640X",
+  "PREFIX": "Mr.",
+  "FIRST": "Óscar156Ramón841",
+  "LAST": "Montaño969",
+  "RACE": "white",
+  "ETHNICITY": "hispanic",
+  "GENDER": "M",
+  "BIRTHPLACE": "Carolina  Puerto Rico  PR",
+  "ADDRESS": "638 Bartoletti Promenade",
+  "CITY": "Boston",
+  "STATE": "MA",
+  "ZIP": "02126",
+  "LAT": "42.42741745921183",
+  "LON": "-70.96702283707397",
+  "Encounters": [
+    {
+      "Id": "f3d9c819-0908-56c6-0216-d09c46192135",
+      "START": "2014-09-01T17:34:03Z",
+      "STOP": "2014-09-01T17:49:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ORGANIZATION": "Organization?identifier=https://github.com/synthetichealth/synthea|936ceb96-2b12-371f-aa68-ee02a9c06f4c",
+      "PROVIDER": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999964395",
+      "ENCOUNTERCLASS": "ambulatory",
+      "CODE": "410620009",
+      "DESCRIPTION": "Well child visit (procedure)",
+      "TOTAL_CLAIM_COST": "1071.22"
+    },
+    {
+      "Id": "e848c452-ab2d-7850-1027-cbd263252fb5",
+      "START": "2015-04-21T18:07:47Z",
+      "STOP": "2015-04-21T19:07:47Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ORGANIZATION": "Organization?identifier=https://github.com/synthetichealth/synthea|c1986c0c-f756-3596-8f90-08adacf220fe",
+      "PROVIDER": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999881599",
+      "ENCOUNTERCLASS": "emergency",
+      "CODE": "50849002",
+      "DESCRIPTION": "Emergency room admission (procedure)",
+      "TOTAL_CLAIM_COST": "146.18",
+      "REASONCODE": "90460009",
+      "REASONDESCRIPTION": "Injury of neck (disorder)"
+    },
+    {
+      "Id": "cf22e269-d8a4-a9e0-6cc2-dc91e4deed3e",
+      "START": "2015-04-21T18:07:47Z",
+      "STOP": "2015-05-14T18:22:47Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ORGANIZATION": "Organization?identifier=https://github.com/synthetichealth/synthea|f002fb4c-544a-3139-b3f1-439864d5474a",
+      "PROVIDER": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999868695",
+      "CODE": "449411000124106",
+      "DESCRIPTION": "Admission to skilled nursing facility (procedure)",
+      "TOTAL_CLAIM_COST": "15209.92",
+      "REASONCODE": "25675004",
+      "REASONDESCRIPTION": "Patient transfer to skilled nursing facility (procedure)"
+    },
+    {
+      "Id": "62da0554-f363-6bf0-4213-ed52639fe3a1",
+      "START": "2015-09-07T17:34:03Z",
+      "STOP": "2015-09-07T18:32:25Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ORGANIZATION": "Organization?identifier=https://github.com/synthetichealth/synthea|936ceb96-2b12-371f-aa68-ee02a9c06f4c",
+      "PROVIDER": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999964395",
+      "ENCOUNTERCLASS": "ambulatory",
+      "CODE": "162673000",
+      "DESCRIPTION": "General examination of patient (procedure)",
+      "TOTAL_CLAIM_COST": "1288"
+    },
+    {
+      "Id": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "START": "2016-09-12T17:34:03Z",
+      "STOP": "2016-09-12T18:05:44Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ORGANIZATION": "Organization?identifier=https://github.com/synthetichealth/synthea|936ceb96-2b12-371f-aa68-ee02a9c06f4c",
+      "PROVIDER": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999964395",
+      "ENCOUNTERCLASS": "ambulatory",
+      "CODE": "162673000",
+      "DESCRIPTION": "General examination of patient (procedure)",
+      "TOTAL_CLAIM_COST": "704.2"
+    },
+    {
+      "Id": "d7d60c73-07b6-61b7-7aea-14310a60e21b",
+      "START": "2017-05-30T14:34:03Z",
+      "STOP": "2017-05-30T14:49:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ORGANIZATION": "Organization?identifier=https://github.com/synthetichealth/synthea|89171335-b9c0-3326-98d6-a837d432b9fd",
+      "PROVIDER": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999988295",
+      "ENCOUNTERCLASS": "ambulatory",
+      "CODE": "185345009",
+      "DESCRIPTION": "Encounter for symptom",
+      "TOTAL_CLAIM_COST": "85.55",
+      "REASONCODE": "444814009",
+      "REASONDESCRIPTION": "Viral sinusitis (disorder)"
+    },
+    {
+      "Id": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "START": "2019-09-16T17:34:03Z",
+      "STOP": "2019-09-16T18:17:47Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ORGANIZATION": "Organization?identifier=https://github.com/synthetichealth/synthea|936ceb96-2b12-371f-aa68-ee02a9c06f4c",
+      "PROVIDER": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999964395",
+      "ENCOUNTERCLASS": "ambulatory",
+      "CODE": "162673000",
+      "DESCRIPTION": "General examination of patient (procedure)",
+      "TOTAL_CLAIM_COST": "1186.78"
+    },
+    {
+      "Id": "81c5581a-e9c0-1bcf-3ca6-2e4e4ba043b2",
+      "START": "2021-08-23T17:34:03Z",
+      "STOP": "2021-08-23T17:49:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ORGANIZATION": "Organization?identifier=https://github.com/synthetichealth/synthea|89171335-b9c0-3326-98d6-a837d432b9fd",
+      "PROVIDER": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999988295",
+      "ENCOUNTERCLASS": "ambulatory",
+      "CODE": "33879002",
+      "DESCRIPTION": "Administration of vaccine to produce active immunity (procedure)",
+      "TOTAL_CLAIM_COST": "278.58"
+    },
+    {
+      "Id": "d4e0dfcd-0dc8-71bc-0f54-bb6c3cfb0281",
+      "START": "2021-09-20T17:34:03Z",
+      "STOP": "2021-09-20T17:49:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ORGANIZATION": "Organization?identifier=https://github.com/synthetichealth/synthea|89171335-b9c0-3326-98d6-a837d432b9fd",
+      "PROVIDER": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999988295",
+      "ENCOUNTERCLASS": "ambulatory",
+      "CODE": "33879002",
+      "DESCRIPTION": "Administration of vaccine to produce active immunity (procedure)",
+      "TOTAL_CLAIM_COST": "278.58"
+    },
+    {
+      "Id": "20f00b2f-bddb-58a3-7029-a28ed9aa89e3",
+      "START": "2022-09-19T17:34:03Z",
+      "STOP": "2022-09-19T18:29:38Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ORGANIZATION": "Organization?identifier=https://github.com/synthetichealth/synthea|936ceb96-2b12-371f-aa68-ee02a9c06f4c",
+      "PROVIDER": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999964395",
+      "ENCOUNTERCLASS": "ambulatory",
+      "CODE": "162673000",
+      "DESCRIPTION": "General examination of patient (procedure)",
+      "TOTAL_CLAIM_COST": "1014.29"
+    }
+  ],
+  "Observations": [
+    {
+      "DATE": "2014-09-01T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "f3d9c819-0908-56c6-0216-d09c46192135",
+      "CATEGORY": "vital-signs",
+      "CODE": "8302-2",
+      "DESCRIPTION": "Body Height",
+      "VALUE": "178.8",
+      "UNITS": "cm",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2014-09-01T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "f3d9c819-0908-56c6-0216-d09c46192135",
+      "CATEGORY": "vital-signs",
+      "CODE": "72514-3",
+      "DESCRIPTION": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "VALUE": "1",
+      "UNITS": "{score}",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2014-09-01T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "f3d9c819-0908-56c6-0216-d09c46192135",
+      "CATEGORY": "vital-signs",
+      "CODE": "29463-7",
+      "DESCRIPTION": "Body Weight",
+      "VALUE": "79.2",
+      "UNITS": "kg",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2014-09-01T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "f3d9c819-0908-56c6-0216-d09c46192135",
+      "CATEGORY": "vital-signs",
+      "CODE": "39156-5",
+      "DESCRIPTION": "Body mass index (BMI) [Ratio]",
+      "VALUE": "24.78",
+      "UNITS": "kg/m2",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2014-09-01T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "f3d9c819-0908-56c6-0216-d09c46192135",
+      "CATEGORY": "vital-signs",
+      "CODE": "59576-9",
+      "DESCRIPTION": "Body mass index (BMI) [Percentile] Per age and sex",
+      "VALUE": "83.79",
+      "UNITS": "%",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2014-09-01T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "f3d9c819-0908-56c6-0216-d09c46192135",
+      "CATEGORY": "vital-signs",
+      "CODE": "85354-9",
+      "DESCRIPTION": "Blood pressure panel with all children optional"
+    },
+    {
+      "DATE": "2014-09-01T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "f3d9c819-0908-56c6-0216-d09c46192135",
+      "CATEGORY": "vital-signs",
+      "CODE": "8867-4",
+      "DESCRIPTION": "Heart rate",
+      "VALUE": "92",
+      "UNITS": "/min",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2014-09-01T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "f3d9c819-0908-56c6-0216-d09c46192135",
+      "CATEGORY": "vital-signs",
+      "CODE": "9279-1",
+      "DESCRIPTION": "Respiratory rate",
+      "VALUE": "15",
+      "UNITS": "/min",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2014-09-01T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "f3d9c819-0908-56c6-0216-d09c46192135",
+      "CATEGORY": "social-history",
+      "CODE": "72166-2",
+      "DESCRIPTION": "Tobacco smoking status",
+      "VALUE": "266919005",
+      "UNITS": "Never smoked tobacco (finding)",
+      "TYPE": "text"
+    },
+    {
+      "DATE": "2014-09-01T18:18:02Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "f3d9c819-0908-56c6-0216-d09c46192135",
+      "CATEGORY": "survey",
+      "CODE": "89204-2",
+      "DESCRIPTION": "Patient Health Questionnaire-9: Modified for Teens total score [Reported.PHQ.Teen]",
+      "VALUE": "2",
+      "UNITS": "{score}",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2015-09-07T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "62da0554-f363-6bf0-4213-ed52639fe3a1",
+      "CATEGORY": "vital-signs",
+      "CODE": "8302-2",
+      "DESCRIPTION": "Body Height",
+      "VALUE": "179.6",
+      "UNITS": "cm",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2015-09-07T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "62da0554-f363-6bf0-4213-ed52639fe3a1",
+      "CATEGORY": "vital-signs",
+      "CODE": "72514-3",
+      "DESCRIPTION": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "VALUE": "1",
+      "UNITS": "{score}",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2015-09-07T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "62da0554-f363-6bf0-4213-ed52639fe3a1",
+      "CATEGORY": "vital-signs",
+      "CODE": "29463-7",
+      "DESCRIPTION": "Body Weight",
+      "VALUE": "76.3",
+      "UNITS": "kg",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2015-09-07T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "62da0554-f363-6bf0-4213-ed52639fe3a1",
+      "CATEGORY": "vital-signs",
+      "CODE": "39156-5",
+      "DESCRIPTION": "Body mass index (BMI) [Ratio]",
+      "VALUE": "23.66",
+      "UNITS": "kg/m2",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2015-09-07T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "62da0554-f363-6bf0-4213-ed52639fe3a1",
+      "CATEGORY": "vital-signs",
+      "CODE": "59576-9",
+      "DESCRIPTION": "Body mass index (BMI) [Percentile] Per age and sex",
+      "VALUE": "70.209",
+      "UNITS": "%",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2015-09-07T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "62da0554-f363-6bf0-4213-ed52639fe3a1",
+      "CATEGORY": "vital-signs",
+      "CODE": "85354-9",
+      "DESCRIPTION": "Blood pressure panel with all children optional"
+    },
+    {
+      "DATE": "2015-09-07T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "62da0554-f363-6bf0-4213-ed52639fe3a1",
+      "CATEGORY": "vital-signs",
+      "CODE": "8867-4",
+      "DESCRIPTION": "Heart rate",
+      "VALUE": "72",
+      "UNITS": "/min",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2015-09-07T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "62da0554-f363-6bf0-4213-ed52639fe3a1",
+      "CATEGORY": "vital-signs",
+      "CODE": "9279-1",
+      "DESCRIPTION": "Respiratory rate",
+      "VALUE": "13",
+      "UNITS": "/min",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2015-09-07T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "62da0554-f363-6bf0-4213-ed52639fe3a1",
+      "CATEGORY": "social-history",
+      "CODE": "72166-2",
+      "DESCRIPTION": "Tobacco smoking status",
+      "VALUE": "266919005",
+      "UNITS": "Never smoked tobacco (finding)",
+      "TYPE": "text"
+    },
+    {
+      "DATE": "2015-09-07T18:32:25Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "62da0554-f363-6bf0-4213-ed52639fe3a1",
+      "CATEGORY": "survey",
+      "CODE": "93025-5",
+      "DESCRIPTION": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]"
+    },
+    {
+      "DATE": "2015-09-07T19:13:23Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "62da0554-f363-6bf0-4213-ed52639fe3a1",
+      "CATEGORY": "survey",
+      "CODE": "55758-7",
+      "DESCRIPTION": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+      "VALUE": "0",
+      "UNITS": "{score}",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2016-09-12T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "CATEGORY": "vital-signs",
+      "CODE": "8302-2",
+      "DESCRIPTION": "Body Height",
+      "VALUE": "180",
+      "UNITS": "cm",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2016-09-12T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "CATEGORY": "vital-signs",
+      "CODE": "72514-3",
+      "DESCRIPTION": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "VALUE": "1",
+      "UNITS": "{score}",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2016-09-12T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "CATEGORY": "vital-signs",
+      "CODE": "29463-7",
+      "DESCRIPTION": "Body Weight",
+      "VALUE": "72",
+      "UNITS": "kg",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2016-09-12T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "CATEGORY": "vital-signs",
+      "CODE": "39156-5",
+      "DESCRIPTION": "Body mass index (BMI) [Ratio]",
+      "VALUE": "22.21",
+      "UNITS": "kg/m2",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2016-09-12T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "CATEGORY": "vital-signs",
+      "CODE": "59576-9",
+      "DESCRIPTION": "Body mass index (BMI) [Percentile] Per age and sex",
+      "VALUE": "45.459",
+      "UNITS": "%",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2016-09-12T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "CATEGORY": "vital-signs",
+      "CODE": "85354-9",
+      "DESCRIPTION": "Blood pressure panel with all children optional"
+    },
+    {
+      "DATE": "2016-09-12T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "CATEGORY": "vital-signs",
+      "CODE": "8867-4",
+      "DESCRIPTION": "Heart rate",
+      "VALUE": "85",
+      "UNITS": "/min",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2016-09-12T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "CATEGORY": "vital-signs",
+      "CODE": "9279-1",
+      "DESCRIPTION": "Respiratory rate",
+      "VALUE": "13",
+      "UNITS": "/min",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2016-09-12T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "CATEGORY": "social-history",
+      "CODE": "72166-2",
+      "DESCRIPTION": "Tobacco smoking status",
+      "VALUE": "266919005",
+      "UNITS": "Never smoked tobacco (finding)",
+      "TYPE": "text"
+    },
+    {
+      "DATE": "2016-09-12T18:05:44Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "CATEGORY": "survey",
+      "CODE": "93025-5",
+      "DESCRIPTION": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]"
+    },
+    {
+      "DATE": "2016-09-12T18:42:26Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "CATEGORY": "survey",
+      "CODE": "75626-2",
+      "DESCRIPTION": "Total score [AUDIT-C]",
+      "VALUE": "1",
+      "UNITS": "{score}",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "vital-signs",
+      "CODE": "8302-2",
+      "DESCRIPTION": "Body Height",
+      "VALUE": "180.2",
+      "UNITS": "cm",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "vital-signs",
+      "CODE": "72514-3",
+      "DESCRIPTION": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "VALUE": "1",
+      "UNITS": "{score}",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "vital-signs",
+      "CODE": "29463-7",
+      "DESCRIPTION": "Body Weight",
+      "VALUE": "76.6",
+      "UNITS": "kg",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "vital-signs",
+      "CODE": "39156-5",
+      "DESCRIPTION": "Body mass index (BMI) [Ratio]",
+      "VALUE": "23.58",
+      "UNITS": "kg/m2",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "vital-signs",
+      "CODE": "85354-9",
+      "DESCRIPTION": "Blood pressure panel with all children optional"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "vital-signs",
+      "CODE": "8867-4",
+      "DESCRIPTION": "Heart rate",
+      "VALUE": "63",
+      "UNITS": "/min",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "vital-signs",
+      "CODE": "9279-1",
+      "DESCRIPTION": "Respiratory rate",
+      "VALUE": "14",
+      "UNITS": "/min",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "laboratory",
+      "CODE": "6690-2",
+      "DESCRIPTION": "Leukocytes [#/volume] in Blood by Automated count",
+      "VALUE": "10.445",
+      "UNITS": "10*3/uL",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "laboratory",
+      "CODE": "789-8",
+      "DESCRIPTION": "Erythrocytes [#/volume] in Blood by Automated count",
+      "VALUE": "4.4675",
+      "UNITS": "10*6/uL",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "laboratory",
+      "CODE": "718-7",
+      "DESCRIPTION": "Hemoglobin [Mass/volume] in Blood",
+      "VALUE": "16.288",
+      "UNITS": "g/dL",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "laboratory",
+      "CODE": "4544-3",
+      "DESCRIPTION": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "VALUE": "35.042",
+      "UNITS": "%",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "laboratory",
+      "CODE": "787-2",
+      "DESCRIPTION": "MCV [Entitic volume] by Automated count",
+      "VALUE": "93.781",
+      "UNITS": "fL",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "laboratory",
+      "CODE": "785-6",
+      "DESCRIPTION": "MCH [Entitic mass] by Automated count",
+      "VALUE": "28.28",
+      "UNITS": "pg",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "laboratory",
+      "CODE": "786-4",
+      "DESCRIPTION": "MCHC [Mass/volume] by Automated count",
+      "VALUE": "33.137",
+      "UNITS": "g/dL",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "laboratory",
+      "CODE": "21000-5",
+      "DESCRIPTION": "Erythrocyte distribution width [Entitic volume] by Automated count",
+      "VALUE": "42.514",
+      "UNITS": "fL",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "laboratory",
+      "CODE": "777-3",
+      "DESCRIPTION": "Platelets [#/volume] in Blood by Automated count",
+      "VALUE": "321.36",
+      "UNITS": "10*3/uL",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "laboratory",
+      "CODE": "32207-3",
+      "DESCRIPTION": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "VALUE": "490.26",
+      "UNITS": "fL",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "laboratory",
+      "CODE": "32623-1",
+      "DESCRIPTION": "Platelet mean volume [Entitic volume] in Blood by Automated count",
+      "VALUE": "9.9058",
+      "UNITS": "fL",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "social-history",
+      "CODE": "72166-2",
+      "DESCRIPTION": "Tobacco smoking status",
+      "VALUE": "266919005",
+      "UNITS": "Never smoked tobacco (finding)",
+      "TYPE": "text"
+    },
+    {
+      "DATE": "2019-09-16T18:17:47Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "survey",
+      "CODE": "93025-5",
+      "DESCRIPTION": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]"
+    },
+    {
+      "DATE": "2019-09-16T18:37:02Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "survey",
+      "CODE": "70274-6",
+      "DESCRIPTION": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]",
+      "VALUE": "8",
+      "UNITS": "{score}",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T19:17:05Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "survey",
+      "CODE": "76504-0",
+      "DESCRIPTION": "Total score [HARK]",
+      "VALUE": "0",
+      "UNITS": "{score}",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2019-09-16T19:57:22Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e2222310-e30e-7c88-de5c-5ce0aab76b02",
+      "CATEGORY": "survey",
+      "CODE": "55758-7",
+      "DESCRIPTION": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+      "VALUE": "1",
+      "UNITS": "{score}",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2022-09-19T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "20f00b2f-bddb-58a3-7029-a28ed9aa89e3",
+      "CATEGORY": "vital-signs",
+      "CODE": "8302-2",
+      "DESCRIPTION": "Body Height",
+      "VALUE": "180.2",
+      "UNITS": "cm",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2022-09-19T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "20f00b2f-bddb-58a3-7029-a28ed9aa89e3",
+      "CATEGORY": "vital-signs",
+      "CODE": "72514-3",
+      "DESCRIPTION": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "VALUE": "3",
+      "UNITS": "{score}",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2022-09-19T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "20f00b2f-bddb-58a3-7029-a28ed9aa89e3",
+      "CATEGORY": "vital-signs",
+      "CODE": "29463-7",
+      "DESCRIPTION": "Body Weight",
+      "VALUE": "81",
+      "UNITS": "kg",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2022-09-19T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "20f00b2f-bddb-58a3-7029-a28ed9aa89e3",
+      "CATEGORY": "vital-signs",
+      "CODE": "39156-5",
+      "DESCRIPTION": "Body mass index (BMI) [Ratio]",
+      "VALUE": "24.94",
+      "UNITS": "kg/m2",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2022-09-19T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "20f00b2f-bddb-58a3-7029-a28ed9aa89e3",
+      "CATEGORY": "vital-signs",
+      "CODE": "85354-9",
+      "DESCRIPTION": "Blood pressure panel with all children optional"
+    },
+    {
+      "DATE": "2022-09-19T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "20f00b2f-bddb-58a3-7029-a28ed9aa89e3",
+      "CATEGORY": "vital-signs",
+      "CODE": "8867-4",
+      "DESCRIPTION": "Heart rate",
+      "VALUE": "87",
+      "UNITS": "/min",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2022-09-19T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "20f00b2f-bddb-58a3-7029-a28ed9aa89e3",
+      "CATEGORY": "vital-signs",
+      "CODE": "9279-1",
+      "DESCRIPTION": "Respiratory rate",
+      "VALUE": "16",
+      "UNITS": "/min",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2022-09-19T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "20f00b2f-bddb-58a3-7029-a28ed9aa89e3",
+      "CATEGORY": "social-history",
+      "CODE": "72166-2",
+      "DESCRIPTION": "Tobacco smoking status",
+      "VALUE": "266919005",
+      "UNITS": "Never smoked tobacco (finding)",
+      "TYPE": "text"
+    },
+    {
+      "DATE": "2022-09-19T18:29:38Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "20f00b2f-bddb-58a3-7029-a28ed9aa89e3",
+      "CATEGORY": "survey",
+      "CODE": "93025-5",
+      "DESCRIPTION": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]"
+    },
+    {
+      "DATE": "2022-09-19T18:56:33Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "20f00b2f-bddb-58a3-7029-a28ed9aa89e3",
+      "CATEGORY": "survey",
+      "CODE": "70274-6",
+      "DESCRIPTION": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]",
+      "VALUE": "2",
+      "UNITS": "{score}",
+      "TYPE": "numeric"
+    },
+    {
+      "DATE": "2022-09-19T19:36:44Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "20f00b2f-bddb-58a3-7029-a28ed9aa89e3",
+      "CATEGORY": "survey",
+      "CODE": "55758-7",
+      "DESCRIPTION": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+      "VALUE": "1",
+      "UNITS": "{score}",
+      "TYPE": "numeric"
+    }
+  ],
+  "Conditions": [
+    {
+      "START": "2014-09-01T17:34:03Z",
+      "STOP": "2014-09-01T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "f3d9c819-0908-56c6-0216-d09c46192135",
+      "CODE": "314529007",
+      "DESCRIPTION": "Medication review due (situation)"
+    },
+    {
+      "START": "2015-04-21T18:07:47Z",
+      "STOP": "2015-06-16T18:07:47Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e848c452-ab2d-7850-1027-cbd263252fb5",
+      "CODE": "90460009",
+      "DESCRIPTION": "Injury of neck (disorder)"
+    },
+    {
+      "START": "2015-04-21T18:07:47Z",
+      "STOP": "2015-06-16T18:07:47Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "e848c452-ab2d-7850-1027-cbd263252fb5",
+      "CODE": "39848009",
+      "DESCRIPTION": "Whiplash injury to neck"
+    },
+    {
+      "START": "2015-09-07T17:34:03Z",
+      "STOP": "2015-09-07T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "62da0554-f363-6bf0-4213-ed52639fe3a1",
+      "CODE": "314529007",
+      "DESCRIPTION": "Medication review due (situation)"
+    },
+    {
+      "START": "2015-09-07T18:32:25Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "62da0554-f363-6bf0-4213-ed52639fe3a1",
+      "CODE": "224299000",
+      "DESCRIPTION": "Received higher education (finding)"
+    },
+    {
+      "START": "2015-09-07T18:32:25Z",
+      "STOP": "2016-09-12T18:05:44Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "62da0554-f363-6bf0-4213-ed52639fe3a1",
+      "CODE": "160903007",
+      "DESCRIPTION": "Full-time employment (finding)"
+    },
+    {
+      "START": "2015-09-07T18:32:25Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "62da0554-f363-6bf0-4213-ed52639fe3a1",
+      "CODE": "713458007",
+      "DESCRIPTION": "Lack of access to transportation (finding)"
+    },
+    {
+      "START": "2016-09-12T17:34:03Z",
+      "STOP": "2022-09-19T17:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "CODE": "314529007",
+      "DESCRIPTION": "Medication review due (situation)"
+    },
+    {
+      "START": "2016-09-12T18:05:44Z",
+      "STOP": "2022-09-19T18:29:38Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "CODE": "160904001",
+      "DESCRIPTION": "Part-time employment (finding)"
+    },
+    {
+      "START": "2016-09-12T18:05:44Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "CODE": "266934004",
+      "DESCRIPTION": "Transport problem (finding)"
+    },
+    {
+      "START": "2016-09-12T18:05:44Z",
+      "STOP": "2022-09-19T18:29:38Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "CODE": "423315002",
+      "DESCRIPTION": "Limited social contact (finding)"
+    },
+    {
+      "START": "2016-09-12T18:05:44Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "CODE": "73595000",
+      "DESCRIPTION": "Stress (finding)"
+    },
+    {
+      "START": "2016-09-12T18:05:44Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "ce2bcb52-16b3-40be-213a-736ab6c45052",
+      "CODE": "266948004",
+      "DESCRIPTION": "Has a criminal record (finding)"
+    },
+    {
+      "START": "2017-05-30T14:34:03Z",
+      "STOP": "2017-06-09T14:34:03Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "d7d60c73-07b6-61b7-7aea-14310a60e21b",
+      "CODE": "444814009",
+      "DESCRIPTION": "Viral sinusitis (disorder)"
+    },
+    {
+      "START": "2022-09-19T18:29:38Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "20f00b2f-bddb-58a3-7029-a28ed9aa89e3",
+      "CODE": "160903007",
+      "DESCRIPTION": "Full-time employment (finding)"
+    },
+    {
+      "START": "2022-09-19T18:29:38Z",
+      "PATIENT": "a1b94f5c-34af-5db2-0325-cbea566463cb",
+      "ENCOUNTER": "20f00b2f-bddb-58a3-7029-a28ed9aa89e3",
+      "CODE": "446654005",
+      "DESCRIPTION": "Refugee (person)"
+    }
+  ]
+}

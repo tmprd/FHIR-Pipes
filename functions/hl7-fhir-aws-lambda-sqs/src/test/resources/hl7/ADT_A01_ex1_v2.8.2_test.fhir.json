@@ -1,0 +1,278 @@
+{
+    "resourceType": "Bundle",
+    "id": "5be0be68-1907-4653-a947-e92330d01102",
+    "meta": {
+        "lastUpdated": "2023-10-08T13: 37: 34.611-04: 00"
+    },
+    "type": "collection",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:Patient/0a3b798b-c83d-4e9e-868c-fd10bb23bea9",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "0a3b798b-c83d-4e9e-868c-fd10bb23bea9",
+                "meta": {
+                    "extension": [
+                        {
+                            "url": "http: //ibm.com/fhir/cdm/StructureDefinition/source-event-trigger",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                                        "code": "A01"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://ibm.com/fhir/cdm/StructureDefinition/source-record-type",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v2-0076",
+                                        "code": "ADT"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://ibm.com/fhir/cdm/StructureDefinition/source-event-timestamp",
+                            "valueDateTime": "1988-08-18T11:26:00+08:00"
+                        },
+                        {
+                            "url": "http://ibm.com/fhir/cdm/StructureDefinition/source-record-id",
+                            "valueString": "MSG00001"
+                        },
+                        {
+                            "url": "http://ibm.com/fhir/cdm/StructureDefinition/source-data-model-version",
+                            "valueString": "2.8"
+                        },
+                        {
+                            "url": "http://ibm.com/fhir/cdm/StructureDefinition/process-client-id",
+                            "valueString": "ADT1"
+                        }
+                    ]
+                },
+                "extension": [
+                    {
+                        "url": "http://ibm.com/fhir/cdm/StructureDefinition/local-race-cd",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "code": "C"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                    "code": "MR",
+                                    "display": "Medical record number"
+                                }
+                            ]
+                        },
+                        "system": "urn:id:ADT1",
+                        "value": "PATID1234"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                    "code": "SS",
+                                    "display": "Social Security number"
+                                }
+                            ]
+                        },
+                        "system": "urn:id:USSSA",
+                        "value": "123456789"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                    "code": "SS",
+                                    "display": "Social Security number"
+                                }
+                            ]
+                        },
+                        "value": "444333333"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                    "code": "DL",
+                                    "display": "Driver's license number"
+                                }
+                            ]
+                        },
+                        "value": "987654"
+                    }
+                ],
+                "name": [
+                    {
+                        "text": "ADAM A EVERYMAN III",
+                        "family": "EVERYMAN",
+                        "given": [
+                            "ADAM",
+                            "A"
+                        ],
+                        "suffix": [
+                            "III"
+                        ]
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "(555) 555-2004",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "(555)555-2004",
+                        "use": "work"
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1961-06-15",
+                "address": [
+                    {
+                        "line": [
+                            "2222 HOME STREET"
+                        ],
+                        "city": "GREENSBORO",
+                        "district": "GL",
+                        "state": "NC",
+                        "postalCode": "27401-1020"
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                            "code": "S",
+                            "display": "Never Married"
+                        }
+                    ],
+                    "text": "Never Married"
+                }
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:Encounter/5b588ab6-eea5-4a54-a558-8b86555187c3",
+            "resource": {
+                "resourceType": "Encounter",
+                "id": "5b588ab6-eea5-4a54-a558-8b86555187c3",
+                "meta": {
+                    "extension": [
+                        {
+                            "url": "http://ibm.com/fhir/cdm/StructureDefinition/source-event-trigger",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                                        "code": "A01"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://ibm.com/fhir/cdm/StructureDefinition/source-record-type",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v2-0076",
+                                        "code": "ADT"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://ibm.com/fhir/cdm/StructureDefinition/source-event-timestamp",
+                            "valueDateTime": "1988-08-18T11:26:00+08:00"
+                        },
+                        {
+                            "url": "http://ibm.com/fhir/cdm/StructureDefinition/source-record-id",
+                            "valueString": "MSG00001"
+                        },
+                        {
+                            "url": "http://ibm.com/fhir/cdm/StructureDefinition/source-data-model-version",
+                            "valueString": "2.8"
+                        },
+                        {
+                            "url": "http://ibm.com/fhir/cdm/StructureDefinition/process-client-id",
+                            "valueString": "ADT1"
+                        }
+                    ]
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                    "code": "VN",
+                                    "display": "Visit number"
+                                }
+                            ]
+                        },
+                        "system": "urn:id:PATID12345001",
+                        "value": "PATID12345001"
+                    }
+                ],
+                "status": "unknown",
+                "class": {
+                    "code": "I"
+                },
+                "serviceType": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/v2-0069",
+                            "code": "SUR",
+                            "display": "Surgical Service"
+                        }
+                    ],
+                    "text": "SUR"
+                },
+                "subject": {
+                    "reference": "Patient/0a3b798b-c83d-4e9e-868c-fd10bb23bea9"
+                },
+                "length": {
+                    "unit": "Minutes"
+                },
+                "hospitalization": {
+                    "admitSource": {
+                        "coding": [
+                            {
+                                "system": "urn:id:v2-0023",
+                                "code": "ADM"
+                            }
+                        ],
+                        "text": "ADM"
+                    },
+                    "specialArrangement": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0009",
+                                    "code": "A0",
+                                    "display": "No functional limitations"
+                                }
+                            ],
+                            "text": "A0"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

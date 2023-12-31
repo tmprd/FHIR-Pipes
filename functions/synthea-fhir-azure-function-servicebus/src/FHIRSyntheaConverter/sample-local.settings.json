@@ -1,0 +1,13 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+      "AzureWebJobsStorage": "<your-storage-account-connection-string>",
+      "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+      "IncomingServiceBusConnectionString": "<your-service-bus-connection-string>",
+      "OutgoingServiceBusConnectionString": "<your-service-bus-connection-string>",
+      "ServiceBusQueueName": "requests",
+      "CosmosDbName": "Repository",
+      "CosmosDbCollectionName": "Messages",
+      "CosmosDBConnection": "<your-cosmos-db-account-connection-string>"
+    }
+  }

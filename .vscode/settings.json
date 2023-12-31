@@ -1,0 +1,14 @@
+{
+    "java.compile.nullAnalysis.mode": "disabled",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.project.sourcePaths": [
+        "functions/hl7-fhir-aws-lambda-sqs"
+    ],
+    "azureFunctions.deploySubpath": "functions/synthea-fhir-azure-function-servicebus/src/bin/Release/net6.0/publish",
+    "azureFunctions.projectLanguage": "C#",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureFunctions.projectSubpath": "functions/synthea-fhir-azure-function-servicebus/src",
+    "azureFunctions.preDeployTask": "publish (functions)",
+    "dotnet.defaultSolution": "functions/synthea-fhir-azure-function-servicebus/Conceptual.FHIRSyntheaConverter.sln"
+}

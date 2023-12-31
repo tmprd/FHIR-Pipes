@@ -1,0 +1,49 @@
+# Local deps
+deps
+
+# Credentials
+local.settings.json
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Build files
+target
+build
+bin
+obj
+*.class
+*.DS_Store
+
+# Eclipse
+.classpath
+.project
+.settings
+
+# Jetbrains IDEA
+.idea
+
+# VSCode
+# .vscode
+
+# Local History files
+.history
+
+# Etc.
+.aws-sam
+notes
+
+# Include these
+!launch.json

@@ -1,0 +1,194 @@
+{% assign resources = msg.entry | map: "resource" %}
+{% assign patient = resources | where: "resourceType", "Patient" | first %}
+
+{
+  "id": "{{ patient.identifier | where: "system", "https://github.com/synthetichealth/synthea" | map: "value" | first }}",
+  "BIRTHDATE": "{{ patient.birthDate }}",
+  "DEATHDATE": "{{ patient.deceasedDateTime }}",
+  "SSN": "{{ patient.identifier | where: "system", "http://hl7.org/fhir/sid/us-ssn" | map: "value" | first }}",
+  {% comment %} Massachusetts license only {% endcomment %}
+  "DRIVERS": "{{ patient.identifier | where: "system", "urn:oid:2.16.840.1.113883.4.3.25" | map: "value" | first }}", 
+  "PASSPORT": "{{ patient.identifier | where: "system", "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber" | map: "value" | first }}", 
+  
+  {% assign officialName = patient.name | where: "use", "official" %}
+  "PREFIX": "{{ officialName | map: "prefix" | first }}",
+  "FIRST": "{{ officialName | map: "given" | first }}",
+  "LAST": "{{ officialName | map: "family" }}",
+  "PREFIX": "{{ officialName | map: "suffix" | first }}",
+
+  "MAIDEN": "{{ patient.name | where: "use", "maiden" | map: "family" }}", 
+  "MARITAL": "{{ patient.maritalStatus | map: "text"  }}", 
+
+  {% assign race_code = patient.extension | where: "url", "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race" | map: "extension" | first | where: "url", "ombCategory" | map: "valueCoding" | map: "code" | first %}
+  {% comment %} TODO incomplete {% endcomment %}
+  "RACE":
+    {% if race_code == '2054-5' -%}
+      "black",
+    {% elsif race_code == '2106-3' -%}
+      "white",
+    {% else %}
+        "",
+    {% endif -%}
+
+  {% assign ethnicity_code = patient.extension | where: "url", "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity" | map: "extension" | first | where: "url", "ombCategory" | map: "valueCoding" | map: "code" | first %}
+  {% comment %} TODO incomplete {% endcomment %}
+  "ETHNICITY": 
+    {% if ethnicity_code == '2135-2' -%}
+      "hispanic",
+    {% elsif ethnicity_code == '2186-5' -%}
+      "nonhispanic",
+    {% else %}
+      "",
+    {% endif -%}
+
+  {% comment %} TODO incomplete {% endcomment %}
+  "GENDER":
+      {% if patient.gender == 'male' -%}
+        "M",
+      {% elsif patient.gender == 'female' -%}
+        "F",
+      {% else %}
+          "",
+      {% endif -%}
+
+  {% assign birth_address = patient.extension | where: "url", "http://hl7.org/fhir/StructureDefinition/patient-birthPlace" | map: "valueAddress" %}
+  "BIRTHPLACE": "{{ birth_address | map: "city" }}  {{ birth_address | map: "state" }}  {{ birth_address | map: "country" }}",
+
+  {% assign firstAddress = patient.address[0] %}
+  "ADDRESS": "{{ firstAddress.line[0] }}",
+  "CITY": "{{ firstAddress.city }}",
+  "STATE": "{{ firstAddress.state }}",
+  "COUNTY": "{{ firstAddress.county }}",
+  "ZIP": "{{ firstAddress.postalCode }}",
+  
+  {% assign geolocation = firstAddress.extension | where: "url", "http://hl7.org/fhir/StructureDefinition/geolocation" | first %}
+  {% comment %} Note: `to_double` and `times:1` parsers are both broken in FHIR-Converter {% endcomment %}
+  "LAT": "{{ geolocation.extension | where: "url", "latitude" | map: "valueDecimal" | first | to_double }}",
+  "LON": "{{ geolocation.extension | where: "url", "longitude" | map: "valueDecimal" | first | to_double }}",
+
+  {% assign claims = resources| where: "resourceType", "Claim" %}
+  {% comment %} TODO sum from ? {% endcomment %}
+  "HEALTHCARE_EXPENSES": "{{ "" }}",
+
+  {% comment %} TODO sum from ? {% endcomment %}
+  "HEALTHCARE_COVERAGE": "{{ "" }}",
+
+  {% assign encounters = resources | where: "resourceType", "Encounter" %}
+  "Encounters": [
+    {% for e in encounters %}
+      {
+        "Id": "{{ e.id }}",
+        {% comment %} input: 2014-09-01T21:34:03+00:00 (this is incorrect, a bug with synthea) {% endcomment %}
+        {% comment %} default output: "09/01/2014 17:34:03" {% endcomment %}
+        {% comment %} expected: 2014-09-01T21:34:03Z {% endcomment %}
+        "START": "{{ e.period.start | date: "yyyy-MM-ddTHH:mm:ssZ" }}", 
+        "STOP": "{{ e.period.end | date: "yyyy-MM-ddTHH:mm:ssZ" }}",
+
+        "PATIENT": "{{ e.subject.reference | replace: "urn:uuid:", "" }}",
+        {% comment %} Filter doesn't work here for some reason {% endcomment %}
+        "ORGANIZATION": "{{ e.serviceProvider.reference | replace: "Organization?identifier=https://github.com/synthetichealth/synthea|", "" }}",
+
+        {% comment %}
+          The expected Synthea value for this is not included in the corresponding FHIR bundle JSON. 
+          Need to find this reference in providers.csv and retrieve the UUID for the matching provider.
+          Unfortunately FHIR only provides the name and NPI of the provider, while Synthea contains no NPI numbers.
+        {% endcomment %}
+        "PROVIDER": "{{ e.participant[0].individual.reference | replace: "urn:uuid:", ""}}",
+
+        {% comment %}
+          The expected Synthea value for this is not included in the corresponding FHIR bundle JSON.
+          (A reference to this encounter is in claims_transactions.csv)
+        {% endcomment %}
+        "PAYER": "{{ "" }}",
+
+        {% comment %} TODO disambiguate {% endcomment %}
+        "ENCOUNTERCLASS": 
+          {% if e.class.code == 'AMB' -%}
+            "ambulatory",
+          {% elseif e.class.code == 'AMB' -%}
+            "outpatient", 
+          {% elsif e.class.code  == 'WELL' -%}
+            "wellness",
+          {% elsif e.class.code  == 'EMER' -%}
+            "emergency",
+          {% elsif e.class.code  == 'EMER' -%}
+            "urgentcare",
+          {% else %}
+              "",
+          {% endif -%}
+      
+        {% assign encounter_type = e.type[0] %} 
+        "CODE": "{{ encounter_type.coding[0].code }}",
+        "DESCRIPTION": "{{ encounter_type.text }}",
+        
+        {% comment %} TODO {% endcomment %}
+        "BASE_ENCOUNTER_COST": "{{ "" }}",
+
+        {% comment %} Find Claim.total.value where claim.item includes an item.encounter which includes an encounter.reference that is this encounter URN {% endcomment %}
+        {% assign encounter_urn = "urn:uuid:" | append: e.id %}
+        {% for claim in claims %}
+          {% for claim_item in claim.item %}
+            {% for encounter in claim_item.encounter %}
+              {% if encounter.reference == encounter_urn %}
+                {% comment %} NOTE: `to_double` is specific to FHIR-Converter, which doesn't support Liquid parsers such as `times: 1` {% endcomment %}
+                {% comment %} NOTE: `to_double` also doesn't work {% endcomment %}
+                {% assign total_encounter_cost = claim.total.value | to_double %}
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        {% endfor %}
+        "TOTAL_CLAIM_COST": "{{ total_encounter_cost | to_double }}",
+
+        {% comment %} TODO {% endcomment %}
+        "PAYER_COVERAGE": "{{ "" }}",
+      
+        {% assign reason_code = e.reasonCode[0].coding[0] %}
+        "REASONCODE": "{{ reason_code.code }}",
+        "REASONDESCRIPTION": "{{ reason_code.display }}"
+      },
+    {% endfor %} 
+  ],
+
+  {% assign observations = resources| where: "resourceType", "Observation" %}
+  "Observations": [
+    {% for o in observations %}
+      {
+        "DATE": "{{ o.effectiveDateTime | date: "yyyy-MM-ddTHH:mm:ssZ" }}",
+        "PATIENT": "{{ o.subject.reference | replace: "urn:uuid:", ""}}",
+        "ENCOUNTER": "{{ o.encounter.reference | replace: "urn:uuid:", ""}}",
+        "CATEGORY": "{{ o.category[0].coding[0].code }}",
+
+        {% assign code = o.code %}
+        "CODE": "{{ code.coding[0].code }}",
+        "DESCRIPTION": "{{ code.text }}",
+
+        {% assign value_quantity = o.valueQuantity %}
+        {% assign value_code = o.valueCodeableConcept %}
+        {% if value_quantity != null -%}
+          "VALUE": "{{ value_quantity.value }}",
+          "UNITS": "{{ value_quantity.unit }}",
+          "TYPE": "numeric"
+        {% elseif value_code != null -%}
+          "VALUE": "{{ value_code.coding[0].code }}",
+          "UNITS": "{{ value_code.coding[0].display }}",
+          "TYPE": "text"
+        {% endif -%}
+      },
+    {% endfor %} 
+  ],
+
+  {% assign conditions = resources | where: "resourceType", "Condition" %}
+  "Conditions": [
+    {% for c in conditions %}
+      {
+        "START": "{{ c.onsetDateTime | date: "yyyy-MM-ddTHH:mm:ssZ" }}",
+        "STOP": "{{ c.abatementDateTime | date: "yyyy-MM-ddTHH:mm:ssZ" }}",
+        "PATIENT": "{{ c.subject.reference | replace: "urn:uuid:", "" }}",
+        "ENCOUNTER": "{{ c.encounter.reference | replace: "urn:uuid:", "" }}", 
+        {% assign code = c.code %}
+        "CODE": "{{ code.coding[0].code }}",
+        "DESCRIPTION": "{{ code.text }}"
+      },
+    {% endfor %} 
+  ]
+}

@@ -1,0 +1,121 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: AWS SQS triggering AWS Lambda sending to another AWS SQS
+Resources:
+  LambdaHL7toFHIR:
+    Type: AWS::Serverless::Function
+    DependsOn: LambdaExecutionRole
+    Metadata:
+      SkipBuild: True
+    Properties:
+      CodeUri: target/hl7-fhir-aws-lambda-sqs-0.1.jar
+      # PackageType: Zip
+      Handler: systems.conceptual.App::handleRequest
+      Role: !GetAtt LambdaExecutionRole.Arn
+      Runtime: java11
+      MemorySize: 700
+      Timeout: 15
+      Architectures:
+        - x86_64
+      # EventInvokeConfig:
+      #   MaximumEventAgeInSeconds: 21600
+      #   MaximumRetryAttempts: 2
+      # EphemeralStorage:
+      #   Size: 512
+      Environment:
+        Variables:
+          PARAM1: VALUE
+          JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1 # More info about tiered compilation https://aws.amazon.com/blogs/compute/optimizing-aws-lambda-function-performance-for-java/
+      Events:
+        SQS1:
+          Type: SQS
+          Properties:
+            Queue:
+              Fn::GetAtt:
+                - QueueHL7
+                - Arn
+            BatchSize: 10
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: Auto
+      SnapStart:
+        ApplyOn: None
+
+
+  QueueHL7:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: hl7-queue
+      SqsManagedSseEnabled: true
+      # DelaySeconds: 0
+      # VisibilityTimeout: 120
+      RedrivePolicy:
+        deadLetterTargetArn:
+          Fn::GetAtt: 
+            - QueueFailedHL7
+            - Arn
+        maxReceiveCount: 10
+
+  QueueFailedHL7:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: hl7-failed-queue
+      SqsManagedSseEnabled: true
+
+  QueueFHIR:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: fhir-queue
+      SqsManagedSseEnabled: true
+      # DelaySeconds: 0
+      # VisibilityTimeout: 120
+
+
+  # Lambda permissions
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service:
+            - lambda.amazonaws.com
+          Action:
+          - sts:AssumeRole
+      Policies:
+        - PolicyName: allowLambdaLogs
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+            - Effect: Allow
+              Action:
+              - logs:*
+              Resource: arn:aws:logs:*:*:*
+        # Incoming Queue
+        - PolicyName: allowIncomingSqs
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+            - Effect: Allow
+              Action:
+              - sqs:ReceiveMessage
+              - sqs:DeleteMessage
+              - sqs:GetQueueUrl 
+              - sqs:GetQueueAttributes
+              - sqs:ChangeMessageVisibility
+              Resource: !GetAtt QueueHL7.Arn
+        # Outgoing Queue
+        - PolicyName: allowOutgoingSqs
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+            - Effect: Allow
+              Action:
+              - sqs:SendMessage
+              - sqs:ReceiveMessage
+              - sqs:DeleteMessage
+              - sqs:GetQueueUrl 
+              - sqs:GetQueueAttributes
+              - sqs:ChangeMessageVisibility
+              Resource: !GetAtt QueueFHIR.Arn

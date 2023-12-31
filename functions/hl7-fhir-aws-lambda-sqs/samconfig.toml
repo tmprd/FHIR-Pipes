@@ -1,0 +1,9 @@
+version = 0.1
+[default.deploy.parameters]
+stack_name = "hl7-fhir-lambda-sqs"
+resolve_s3 = true
+s3_prefix = "hl7-fhir-lambda-sqs"
+region = "us-east-2"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = []

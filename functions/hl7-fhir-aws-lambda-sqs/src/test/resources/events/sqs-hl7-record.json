@@ -1,0 +1,9 @@
+{
+    "Records": [
+        {
+            "messageId": "1ff1dfb4-6bf2-4052-af55-cf126d9913e4",
+            "receiptHandle": "AQEBxa/5tJUk1mM+m/LdHxBeDhcFOPQPks3TCEu6rzH30Nqaq+4n8ZF76xW5WMKNWroTC5SEnDtsxFUVln50aGPNkp/Zpc5V6XBWcRf1b0Qn4EptzirHDmS6SVsPSgPca4qDpxBcPu08dTx7OyNTwTRxaZtTwwa2mGQC++WIgfT32196pcisY+w/QUVHbd1HdcFQ20NsZQ1BM7MzFevU8zRFOAmT2MMs3+92+H+QiOf4UVm9ievr4N56Z3aKKeGPDb0qlk97k+P45WsB+GFvvZucD07WyqqNkc+UIUpXPUebPrI=",
+            "body": "MSH|^~\\&|test|test|testsystem|testfacility|20010101000000||ADT^A04|q123456789t123456789x123456|p|2.3\rEVN|A04|20010101000000|||^jones^michael^^^^^^^current\rPID|1||123456789|0123456789^aa^^jp|martin^steven||19850101000000|m|||123 fake street^suite1^nice town^al^a1b2c3^jp^home^^1234|1234|(555)555-0123^home^jp:1234567|||s|msh|12345678|||||||0|||||n\rPD1|1|||john.smith@dremail.com^smith^john\rOBX|1|st|||42 year old Caucasian female admitted on 7/16/13 from Mercy General to Room 115B. Diagnosis for this admission is s/p PE. Pt admitted for PT/OT/pain control/IV ABT. She had a sitter at the hospital d/t severe agitation and discomfort with the IV line. According to hospital records, two days prior to transfer, her cognitive status improved and she no longer required the sitter. Co-morbid diagnoses include bipolar disorder, chronic fatigue syndrome, diabetes and a-fib. Patient has been taking propanolol 10Mg\r"
+        }
+    ]
+}
